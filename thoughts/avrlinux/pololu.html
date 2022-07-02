@@ -1,0 +1,291 @@
+<!--#set var="title" value="Linux Atmel AVR Tutorial"--> 
+<!--#set var="keywords" value="linux,atmel,avr,attiny,attiny26,attiny26l,gcc-avr,gvv"--> 
+<!--#include virtual="/header.html" -->
+
+<h2>Introduction</h2>
+<p>
+The <a href="http://en.wikipedia.org/wiki/AVR">Atmel AVR family</a> is
+a set of powerful microcontrollers that were designed to be used with
+the C programming language.  You can now can compile a C program for
+the AVRs with <a href="http://gcc.gnu.org/">gcc</a>, then load the
+program onto using an inexpensive programmer and free tools.  For
+Linux users who want to work on digital electronics, robotics, and
+automation, these chips are the way to go.  This page is a
+step-by-step tutorial that presents a simple, cheap way to
+start experimenting with AVRs.
+</p>
+
+<p>
+Specifically, on this page you'll find instructions for assembling and
+programming the AVR <a
+href="http://www.avrfreaks.net/Devices/devices.php?action=1&amp;devid=60">ATTiny26</a>
+using a <a
+href="http://www.pololu.com/products/pololu/0389/">prototyping
+board</a> from <a href="http://www.pololu.com/">Pololu</a> and a few
+assorted parts from <a href="http://www.digikey.com/">Digi-key</a>.
+Some soldering experience and the ability to install programs on your
+Linux computer are required.  It will cost you about $60 and 50M of disk
+space, and you'll be up and running about three hours after you unpack
+the electronics.
+</p>
+
+<h2>1. Order electronic parts</h2>
+<p>
+Order everything you don't already have from <a
+href="http://www.pololu.com/">Pololu</a>:
+</p>
+
+<table>
+<tr><th>Part</th><th>Price</th></tr>
+<tr>
+  <td><a href="http://www.pololu.com/products/pololu/0389/">ATtiny26
+  prototyping board</a></td>
+  <td>$20.00</td>
+</tr>
+<tr>
+  <td><a href="http://www.pololu.com/products/tools.html">Tools:
+  soldering iron, wire strippers</a></td>
+  <td>16.75</td>
+</tr>
+</table>
+
+<p>
+and order these parts from Digi-key:
+</p>
+
+<table>
+<tr><th>Part</th><th>Price</th></tr>
+<tr>
+  <td><a
+  href="http://www.digikey.com/scripts/DkSearch/dksus.dll?PName?Name=ATAVRISP-ND&amp;Site=US">ATAVRISP-ND programmer</a></td>
+  <td>$29.00</td>
+</tr>
+<tr>
+  <td><a
+  href="http://www.digikey.com/scripts/DkSearch/dksus.dll?PName?Name=490-1208-ND&amp;Site=US">490-1208-ND 4MHz resonator</a></td>
+  <td>0.33</td>
+</tr>
+<tr>
+  <td><a
+  href="http://www.digikey.com/scripts/DkSearch/dksus.dll?PName?Name=S1012-15-ND&amp;Site=US">S1012-15-ND 0.1&quot; male header</a></td>
+  <td>0.69</td>
+</tr>
+<tr>
+  <td><a
+  href="http://www.digikey.com/scripts/DkSearch/dksus.dll?PName?Name=EG1903-ND&amp;Site=US">EG1903-ND SPDT switch</a></td>
+  <td>0.71</td>
+</tr>
+<tr>
+  <td><a
+  href="http://www.digikey.com/scripts/DkSearch/dksus.dll?PName?Name=CP-102A-ND&amp;Site=US">CP-102A-ND 2.1mm power jack</a></td>
+  <td>0.38</td>
+</tr>
+<tr>
+  <td><a
+  href="http://www.digikey.com/scripts/DkSearch/dksus.dll?PName?Name=T405-P5P-ND&amp;Site=US">T405-P5P-ND 2.1mm DC power transformer</a></td>
+  <td>5.08</td>
+</tr>
+<tr>
+  <td><a
+  href="http://www.digikey.com/scripts/DkSearch/dksus.dll?PName?Name=516-1293-ND&amp;Site=US">516-1293-ND green LED</a></td>
+  <td>0.36</td>
+</tr>
+<tr>
+  <td><a
+  href="http://www.digikey.com/scripts/DkSearch/dksus.dll?PName?Name=1.0KQBK-ND&amp;Site=US">1.0KQBK-ND 1k resistor</a></td>
+  <td>0.28</td>
+</tr>
+</table>
+
+<p>
+You may want to make substitutions on some of these parts (e.g. faster
+resonator) or order additional electronics for your project.  You will
+additionally need solder and a small amount of wire to make
+connections on the proto board.
+</p>
+
+<a href="assembly_big.jpg"><img  alt="picture of assembly"
+src="assembly.jpg" class="float"></a>
+
+<h2>2. Assemble</h2>
+
+<p>
+After familiarizing yourself with your new electronics, solder the,
+button, switch, power connector, header, and resonator into the
+clearly marked locations on the proto board.  You should be able to
+plug in power and see the tiny green LED light up when you turn on the
+power switch.  Then add the larger LED from digikey and the resistor
+as shown in the picture.  Remember to put the short lead of the LED
+below, since current will be flowing out of port RA0 and through the
+LED to GND.  Add wires to supply power and ground to the long buses on
+the left side of the board, as shown.
+</p>
+
+<p>
+Test your programmer.  For this, you will need to plug the header on
+the programmer ribbon cable into your board.  As far as I can tell
+there is no way to figure out the correct orientation of the header
+without opening the programmer up, so be careful.  On mine the
+orientation that worked was with the red side of the ribbon cable
+down.  Attach it this way, turn on the power switch, and if you don't
+see a red light on the programmer, immediately turn off power and
+inspect the connections.
+</p>
+
+<h2>3. Install software</h2>
+
+<p>
+You'll need a computer running linux to get gcc running; you could
+probably also set this stuff up under cygwin.  I used Slackware 10,
+but the same instructions should work on any modern linux system.
+</p>
+
+<p>
+Get the latest binutils from <code>ftp://ftp.gnu.org/gnu/binutils/</code>.
+Install with
+</p>
+<blockquote>
+<p><code>
+./configure --target=avr --prefix=/usr/local/atmel<br>
+make<br>
+make install
+</code></p>
+</blockquote>
+
+<p>
+Get the latest gcc-core from <code>ftp://ftp.gnu.org/gnu/gcc/</code>.
+Install with
+</p>
+<blockquote>
+<p><code>
+export PATH=/usr/local/atmel/bin:$PATH<br>
+./configure --target=avr --prefix=/usr/local/atmel --enable-language=c<br>
+make<br>
+make install
+</code></p>
+</blockquote>
+
+<p>
+Get the latest <a href="http://www.nongnu.org/avr-libc/">avr-libc</a>.
+This package is base code for the AVR, so it needs to know the
+location of the AVR gcc and binutils.  Edit the PREFIX line of
+the file <code>doconf</code> to refer to
+<code>/usr/local/atmel</code>, then install with
+</p>
+<blockquote>
+<p><code>
+./doconf<br>
+./domake install
+</code></p>
+</blockquote>
+
+<p>
+Get the latest <a
+href="http://savannah.nongnu.org/projects/uisp/">Uisp</a>, the program
+you will use to access the AVRISP.  Install with
+</p>
+<p>
+<blockquote>
+<p><code>
+./configure<br>
+make<br>
+make install
+</code></p>
+</blockquote>
+
+<h2>Try a simple program</h2>
+
+<p>
+Save this code as <code>blink.c</code>:
+</p>
+
+<blockquote>
+<pre>
+#include &lt;avr/io.h&gt;
+
+/* at 4 MHz we get 1us per 4 instructions */
+inline void delayus() { asm volatile("nop\nnop\nnop\nnop"); }
+
+void delayms(uint16_t millis) {
+  uint16_t loop;
+  while ( millis ) {
+    loop = 100;
+    while (loop) {
+      /* 20us of delays */
+      delayus(); delayus(); delayus(); delayus(); delayus();
+      delayus(); delayus(); delayus(); delayus(); delayus();
+      loop --;
+    }
+    millis--;
+  }
+}
+
+int main(void) {
+  sbi(DDRA,PA0); /* set PA0 to output */
+  while(1) {
+    sbi(PORTA,PA0); /* LED on */
+    delayms(100);
+    cbi(PORTA,PA0); /* LED off */
+    delayms(900);
+  }
+  return 0;
+}
+</pre></blockquote>
+
+<p>
+And save this as <code>Makefile</code>:
+</p>
+
+<blockquote><pre>
+CC=/usr/local/atmel/bin/avr-gcc
+CFLAGS=-g -Os -Wall -mcall-prologues -mmcu=attiny26
+OBJ2HEX=/usr/local/atmel/bin/avr-objcopy 
+UISP=/usr/local/atmel/bin/uisp 
+TARGET=blink
+
+program : $(TARGET).hex
+	$(UISP) -dprog=stk500 -dserial=/dev/ttyS1 --erase -dpart=attiny26
+	$(UISP) -dprog=stk500 -dserial=/dev/ttyS1 --upload -dpart=attiny26 \
+		if=$(TARGET).hex -v=2
+	$(UISP) -dprog=stk500 -dserial=/dev/ttyS1 -dpart=attiny26 \
+		--wr_fuse_l=0xee
+%.obj : %.o
+	$(CC) $(CFLAGS) $< -o $@
+
+%.hex : %.obj
+	$(OBJ2HEX) -R .eeprom -O ihex $< $@
+
+clean :
+	rm -f *.hex *.obj *.o
+
+</pre></blockquote>
+
+<p>
+With the programmer plugged in, type <code>make</code>.  Your LED
+should now start to blink!
+</p>
+
+<h2>Further reading</h2>
+<ul>
+<li><a href="http://www.nongnu.org/avr-libc/">The avr-gcc homepage</a>
+contains essential documentation on the software base you need to use
+to write programs for the ATtiny.  This is where to look for the
+definition of predefined functions like <code>sbi</code>.
+<li><a
+href="http://www.atmel.com/dyn/products/product_card.asp?part_id=2967">The
+offical Atmel page on ATtiny26</a> has the complete manual.
+<li><a href="http://gcc.gnu.org/onlinedocs/gcc-3.4.2/gcc/">The gcc
+documentation</a> has lots of help on compiler options.
+<li><a
+href="http://www.avrfreaks.net/Devices/devices.php?action=1&amp;devid=61">The
+AVR Freaks page on ATtiny26</a> links to lots of information about the
+chip and related software and hardware.
+</ul>
+
+<p>
+Finally, much of this page was inspired by <a
+href="http://www.linuxfocus.org/English/March2002/article231.shtml">Guido
+Socher's 2002 article</a> on avr-gcc.  It's slightly out of date now but
+still contains a lot of useful details that I haven't gone into here.
+</p>
+<!--#include virtual="/footer_buttons.html" -->

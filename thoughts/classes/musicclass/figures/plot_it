@@ -1,0 +1,84 @@
+#!/usr/local/bin/gnuplot
+
+set terminal latex
+
+# basic sine wave
+set output "sine_wave.tex"
+
+set xlabel 'time ($t$)'
+set ylabel "$x$"
+
+set nokey
+set size 1.0,0.5
+
+plot [x=0:10] 5.5*sin(2*x);
+
+# one gaussian
+set output "sine_wave.f.tex"
+
+set xlabel 'ear hair natural frequency ($f$)'
+set ylabel '\rotatebox{90}{magnitude of hair oscillation}'
+
+plot [x=0:2] 5.5*exp(-((x-0.319)*40)**2) with points
+
+# a more complicated wave
+set output "piano_note.tex"
+
+set xlabel 'time ($t$)'
+set ylabel "$x$"
+
+set samples 1000
+plot [x=0:50] (5.5*sin(2*x)+5.5*sin(2.1*x)+5.5*sin(1.9*x)+ \
+	       5.0*sin(4.1*x)+5.0*sin(4.2*x)+5.0*sin(4.0*x)+ \
+               3.8*sin(6.2*x)+3.8*sin(6.3*x)+3.8*sin(6.1*x)+ \
+               2.5*sin(8.3*x)+2.5*sin(8.2*x)+2.5*sin(8.1*x)+ \
+               1.5*sin(10.5*x)+2.5*sin(10.4*x)+2.5*sin(10.3*x)+ \
+               1.0*sin(12.3*x)+2.5*sin(12.2*x)+2.5*sin(12.1*x))/3
+
+# many gaussians
+set samples 100
+set output "piano_note.f.tex"
+
+set xlabel 'ear hair natural frequency ($f$)'
+set ylabel '\rotatebox{90}{magnitude of hair oscillation}'
+
+plot [x=0:2] 5.5*exp(-((x-0.319)*40)**2)+5.0*exp(-((x-0.652)*40)**2)+3.8*exp(-((x-0.986)*40)**2)+2.5*exp(-((x-1.305)*40)**2) +\
+             1.5*exp(-((x-1.66)*40)**2) + 1.0*exp(-((x-1.94)*40)**2) with points
+
+# many harmonics
+set size 1.0,1.0
+set noxtics
+set noytics
+set xlabel '$x$'
+set ylabel '$y$'
+set output "string_harmonics.tex"
+
+set yrange [-5.5:1.5]
+
+plot [x=0:2*3.1415] sin(x/2) with lines lt 1,sin(x)-2 with lines lt 1,sin(3*x/2)-4 with lines lt 1
+
+# air harmonics
+set size 0.7,0.5
+set noxtics
+set noytics
+set xlabel '$x$'
+set ylabel '$y$'
+set output "air_harmonics.tex"
+
+set yrange [-5.5:1.5]
+
+plot [x=0:2*3.1415] sin(x/2) with lines lt 1,sin(x)-2 with lines lt 1,sin(3*x/2)-4 with lines lt 1, \
+	0 with lines lt 4, -2 with lines lt 4, -4 with lines lt 4
+
+# air harmonics with one open end
+set size 0.7,0.5
+set noxtics
+set noytics
+set xlabel '$x$'
+set ylabel '$y$'
+set output "air_harmonics_open.tex"
+
+set yrange [-5.9:1.5]
+
+plot [x=0:2*3.1415] sin(x/4) with lines lt 1,sin(3*x/4)-2.2 with lines lt 1,sin(5*x/4)-4.4 with lines lt 1, \
+	0 with lines lt 4, -2.2 with lines lt 4, -4.4 with lines lt 4

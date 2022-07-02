@@ -1,0 +1,54 @@
+<html>
+<head><title>Agorobots - Friday plan</title></head>
+<body>
+<h1>Agorobots - Friday plan</h1>
+
+<h2>Using the motor driver chip to drive motors.</h2>
+<img src="74410ne.png">
+<table border>
+<tr><th>EN (enable) ports</th><td>Must be high to turn on the chip</td></tr>
+<tr><th>A ports</th><td>Inputs</th></tr>
+<tr><th>Y ports</th><td>Outputs (connect to motors)</th></tr>
+<tr><th>Ground</th><td>Connect <em>all ground pins</em> to ground (0V)</td></tr>
+<tr><th>VCC1</th><td>Connect to 5V</td></tr>
+<tr><th>VCC2</th><td>Connect to 6V for full power</td></tr>
+</table>
+
+Check with me before plugging this one in, and please put a bit of
+masking tape on the chip for saftey; it can explode!
+
+<h2>Using motors</h2>
+You will get one <a href="http://www.pololu.com/products/tmg/">Tamiya
+twin-motor gearbox kit</a>.  There are two ways to put the kit
+together; with a 58:1 (fast) gear ratio or with a 203:1 (slow) gear
+ratio.  The slow version will probably be fast enough for us, so use
+that one!
+<p>
+Using our water model from before, think of a motor as a big
+waterwheel in the river, that spins when water flows past it.  What
+happens when you suddenly try to stop the flow of water?  The wheel
+keeps spinning for a while, and pumps water through your circuit.
+(This is not just because there is a physical axle spinning here, but
+mainly because of the magnetic fields created by the motor coils.)
+This extra pumping can cause flash floods (spikes) of 50 or 100 volts
+that can do damage to the rest of the circuit.  How do you deal with
+these spikes?  The same way Champaign-Urbana dealt with the boneyard
+flooding "problem" - build detention basins.  <i>Capacitors</I> are
+detention basins for electricity: they can store a lot of extra charge
+and release it when needed.  Put these all over your circuit,
+especially right on the motor terminals (I will show you how).  The
+direction of the big capacitors is important - put them in so that
+they will get voltage in the right direction most of the time.
+
+<h2>Putting it all together</h2>
+
+Think of something you want your robot to do (something
+<em>simple</em> is best for your first robotics project!) and plan out
+a program for it.  It may help you to draw a flowchart on a piece of
+paper.  Then, using what you have learned about programming, motors,
+and sensors, build it!
+
+<hr>
+<a href="..">Go back to the main page.</a>
+</body>
+</html>

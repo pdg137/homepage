@@ -1,0 +1,55 @@
+---
+layout: page
+title: Linux user Access for a USB-Serial Device
+---
+
+<h2>Introduction</h2>
+<p>
+In the old days, PCs always came with RS-232 serial ports, allowing
+them to be connected to various devices such as modems, bar code
+readers, PDAs, etc.  I use serial ports for <a
+href="/avrlinux/">programming microcontrollers</a>, so I was surprised
+to find that my new laptop didn't come with a serial port.  Computers
+without serial ports are becoming more and more common, since 90% of
+consumers don't need them; luckily for those of use who do need
+serial ports, USB to serial adapters are available on the web and in
+local stores.  I chose to purchase a <a
+href="http://www.keyspan.com/">keyspan</a> high-speed USB-serial
+adapter, since the packaging claimed support for linux; but the
+instructions here should apply to any working usb-serial device.
+</p>
+
+<h2>The Problem</h2>
+<p>
+When I plugged in the device, a port <code>/dev/tts/USB0</code> was
+automatically created.  Keep in mind that I am using Slackware 10.1
+and kernel 2.6.10; your distribution might give you slightly different
+results.  Now, here's the problem: that device was created without
+user read/write permissions!
+</p>
+
+<pre>
+  bash-3.00$ ls -l /dev/tts/USB0
+  crw-rw----  1 root uucp 188, 0 2005-03-06 17:31 /dev/tts/USB0
+</pre>
+
+<p>
+It's great that everything worked automatically, but of course, if I
+can't access the device from my account, it is pretty much useless to
+me.  This is a typical linux problem; the system gets you 99% of the
+way there, leaving you with the nearly impossible challenge of
+covering that last 1%.
+</p>
+
+<h2>The Solution</h2>
+<p>
+Open up the file <code>/etc/group</code> and find the line beginning
+with <code>uucp</code>.  You need to add your username to the list of
+users at the end of this line, so that it looks like
+<pre>
+  uucp::14:uucp,paul
+</pre>
+Log out and log in again; thats it!
+</p>
+
+<!--#include virtual="/footer_buttons.html" -->

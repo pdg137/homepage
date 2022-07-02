@@ -1,0 +1,36 @@
+\documentclass[10pt]{article}
+\usepackage{natbib}
+\usepackage{fullpage}
+\usepackage{graphicx}
+
+\begin{document}
+
+\def\longrightharpoonup{\relbar\joinrel\rightharpoonup}
+\def\longleftharpoondown{\leftharpoondown\joinrel\relbar}
+
+\def\longrightleftharpoons{
+  \mathop{
+    \vcenter{
+      \hbox{
+	\ooalign{
+	  \raise1pt\hbox{$\longrightharpoonup\joinrel$}\crcr
+	  \lower1pt\hbox{$\longleftharpoondown\joinrel$}
+	}
+      }
+    }
+  }
+}
+
+\newcommand{\rates}[2]{\displaystyle
+  \mathrel{\longrightleftharpoons^{#1\mathstrut}_{#2}}}
+
+\begin{eqnarray}
+{\rm H}_2{\rm O} & \rates{k_{\rm 1}}{k_{\rm 2}} &{\rm H}^+ + {\rm OH}^-\\
+^{107}{\rm Ag} + {\rm n}
+ & \displaystyle \mathop{\longrightarrow}^\textrm{\scriptsize{capture}}
+ & ^{108}{\rm Ag}\\
+^{108}{\rm Ag}
+ & \displaystyle \mathop{\longrightarrow}^\textrm{\scriptsize{2.42~min}}
+ & ^{108}{\rm Cd}^* + e^- + \nu\\
+\end{eqnarray}
+\end{document}

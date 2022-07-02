@@ -13,9 +13,11 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Simple pages site template
+title: Paul Grayson's Home Page
+author: Paul Grayson
 description: >- # this means to ignore newlines until "baseurl:"
-  Simple pages site template description.
+  A collection of thoughts about science, computers, education, and more.
+
 
 # Note: configuring the following options might make it hard to get your
 # page working on both GitHub and locally.
@@ -26,6 +28,9 @@ description: >- # this means to ignore newlines until "baseurl:"
 email: my initials at alum.mit.edu
 twitter_username: pdg137
 github_username:  pdg137
+facebook_username: paul.d.grayson
+linkedin_username: pdg137
+stackoverflow_username: users/602419/pdg137
 
 # Build settings
 markdown: kramdown
@@ -35,7 +40,8 @@ plugins:
 
 # Pages to show in header
 header_pages:
-  - pages/example/index.md
+  - thoughts/index.md
+  - research/index.md
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

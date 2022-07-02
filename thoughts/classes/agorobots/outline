@@ -1,0 +1,48 @@
+Day 1:
+
+Basic circuits (10 min)
+ - Intro lecture (10 min)
+ * Some exciting robot demo (10 min)
+ - Wire up power supply (5 min)
+ - Light up LED (5 min)
+ - Plug in PICs and clock, check that the default program works (10 min)
+ - Intro to the PIC (5 min)
+ - Intro to PIC assembly with the default program as an example (5 min)
+
+Day 2:
+
+Basic PIC programming (55 min)
+ - Show MPlab (5 min)
+ - More about PIC assembly (10 min)	
+ - Modify the default program slightly (10 min)
+ - Load onto PIC and test (10 min)
+ - Intro to sensors (10 min)
+ * show some sensors (5 min)
+ - Wire up a switch (5 min)
+
+Day 3: 
+
+Add a sensor to your program (65 min)
+ - PIC assembly needed for a sensor (5 min)
+ - Use sensor in program (20 min)
+ - Intro to actuators & high power circuits / H-bridge (10 min)
+ - Connect wires to motor and test (5 min)
+ - Build H-bridge circuit, check, and test w/ jumpers (15 min)
+ * Show servos, motors, steppers, solenoids (10 min)
+
+Day 4:
+
+Build a robot (60)
+ - Intro to model of closed-loop systems (10 min)
+ - Assemble robot (10 min)
+ - Try driving then stopping after a delay (20 min)
+ - Use sensor to make a closed loop system (20 min)
+ * 6.270 video (10 min)
+
+ - Improve program, ask questions
+ - Debugging
+ * watch more videos
+ - Try light sensors, build photovores 
+ - Brainstorming
+ - Line following
+ - etc, etc.

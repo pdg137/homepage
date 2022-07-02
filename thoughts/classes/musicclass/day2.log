@@ -1,0 +1,176 @@
+This is pdfTeX, Version 3.14159-14h-released-20010417 (Web2C 7.3.3.1) (format=pdflatex 2001.12.12)  13 FEB 2002 10:37
+**day2
+(./day2.tex{/usr/share/texmf/pdftex/config/pdftex.cfg}
+LaTeX2e <2000/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, i
+talian, nohyphenation, loaded.
+(/usr/share/texmf/tex/latex/base/article.cls
+Document Class: article 2000/05/19 v1.4b Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/size10.clo
+File: size10.clo 2000/05/19 v1.4b Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 1999/02/16 v1.0l Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texmf/tex/latex/config/graphics.cfg)
+Package graphics Info: Driver file: pdftex.def on input line 80.
+
+(/usr/share/texmf/tex/latex/graphics/pdftex.def
+File: pdftex.def 2000/06/16 v0.03a graphics/color for pdftex
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/share/texmf/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 42.
+)
+(/usr/share/texmf/tex/latex/misc/fullpage.sty
+Style Option FULLPAGE Version 2 as of 15 Dec 1988
+) (./day2.aux
+
+LaTeX Warning: Label `sine_wave' multiply defined.
+
+
+LaTeX Warning: Label `sine_wave.f' multiply defined.
+
+)
+\openout1 = `day2.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+ (/usr/share/texmf/tex/context/base/supp-pdf.tex
+(/usr/share/texmf/tex/context/base/supp-mis.tex
+loading : Context Support Macros / Missing
+\protectiondepth=\count88
+\scratchcounter=\count89
+\scratchdimen=\dimen105
+\scratchskip=\skip43
+\scratchmuskip=\muskip10
+\scratchbox=\box26
+\scratchread=\read1
+\scratchwrite=\write3
+\nextbox=\box27
+\nextdepth=\dimen106
+\everyline=\toks15
+\!!counta=\count90
+\!!countb=\count91
+\recursecounter=\count92
+)
+loading : Context Support Macros / PDF
+\nofMPsegments=\count93
+\nofMParguments=\count94
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 22.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 22.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 22.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 22.
+ (/usr/share/texmf/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2eLaTeX symbol font definitions
+)
+<figures/ear2.png 702.625pt, 254.9525pt, image 1>
+File: figures/ear2.png Graphic file (type png)
+ <use figures/ear2.png>
+Underfull \hbox (badness 1490) in paragraph at lines 44--44
+[]/cmr10/Figure 1: On the left is a view of the in-side of your ear. On the rig
+ht is a cross-section
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 56.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 56.
+(./figures/sine_wave.tex
+\plotpoint=\box28
+)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+(./figures/sine_wave.f.tex)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+(./figures/piano_note.tex)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+(./figures/piano_note.f.tex)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[1
+
+{/usr/share/texmf/dvips/config/pdftex.map
+Warning: pdflatex (file /usr/share/texmf/dvips/config/pdftex.map): invalid entr
+y for `rtxphvbo': SlantFont/ExtendFont can be used only with embedded T1 fonts
+
+Warning: pdflatex (file /usr/share/texmf/dvips/config/pdftex.map): invalid entr
+y for `rtxphvro': SlantFont/ExtendFont can be used only with embedded T1 fonts
+
+Warning: pdflatex (file /usr/share/texmf/dvips/config/pdftex.map): invalid entr
+y for `rtxptmbo': SlantFont/ExtendFont can be used only with embedded T1 fonts
+
+Warning: pdflatex (file /usr/share/texmf/dvips/config/pdftex.map): invalid entr
+y for `rtxptmro': SlantFont/ExtendFont can be used only with embedded T1 fonts
+} <./figures/ear2.png>] [2] (./day2.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 849 strings out of 50460
+ 10354 string characters out of 688538
+ 189431 words of memory out of 1500001
+ 3852 multiletter control sequences out of 10000+25000
+ 9304 words of font info for 37 fonts, out of 400000 for 1000
+ 14 hyphenation exceptions out of 10000
+ 25i,8n,19p,373b,334s stack positions out of 3000i,500n,3000p,50000b,5000s
+</usr/share/texmf/fonts/type1/bluesky/cm/lasy10.pfb></usr/share/texmf/fonts/t
+ype1/bluesky/cm/cmmi10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmti8.pfb><
+/usr/share/texmf/fonts/type1/bluesky/cm/cmr8.pfb></usr/share/texmf/fonts/type1/
+bluesky/cm/cmr6.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmti10.pfb></usr/s
+hare/texmf/fonts/type1/bluesky/cm/cmr7.pfb></usr/share/texmf/fonts/type1/bluesk
+y/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsl10.pfb></usr/share
+/texmf/fonts/type1/bluesky/cm/cmr10.pfb></usr/share/texmf/fonts/type1/bluesky/c
+m/cmbx12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmtt12.pfb></usr/share/te
+xmf/fonts/type1/bluesky/cm/cmr12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/c
+mr17.pfb>
+Output written on day2.pdf (2 pages, 147993 bytes).

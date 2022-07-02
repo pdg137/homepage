@@ -1,21 +1,24 @@
 ---
 layout: home
-title: Simple pages - main page
+title: Welcome
 ---
 
-This site is a template that you can copy to get started publishing your own
-sites online using GitHub Pages.
-[See source code here.](https://github.com/pdg137/simple-pages)
+Hello, my name is Paul Grayson, and this is my personal page on the
+web.
 
-See the posts below for help getting your own site running.
+I am in charge of IT and one of the founders at [Pololu Robotics and
+Electronics][1], a manufacturer and online retailer in Las Vegas,
+Nevada. Earlier, I grew up in [Urbana, Illinois][2] (that's my photo
+on Wikipedia!), went to high school at [Uni][3], did college at
+[MIT][4], and (apparently imitating Jodie Foster in *Contact*)
+received a Ph.D. in physics from [Caltech][5]. Lately much of my time
+is occupied with homeschooling my three kids, and I am particularly
+interested in the intersection of science, computers, and education.
 
-You can add static content here or compose blog posts in the `_posts/` folder.
+I do not update this page very often!
 
-[Here is an example link](pages/example) to another page that has information on
-formatting.
-
-Check `_config.yml` for site-specific customizations.
-
-You can also make your own `favicon.ico` icon with help from a site like
-[RealFaviconGenerator](https://realfavicongenerator.net/) or
-[favicon.io](https://favicon.io/).
+[1]: https://www.pololu.com/
+[2]: https://en.wikipedia.org/wiki/Urbana,_Illinois
+[3]: https://www.uni.illinois.edu/
+[4]: https://www.mit.edu/
+[5]: https://www.caltech.edu/

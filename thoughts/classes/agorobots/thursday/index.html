@@ -1,0 +1,34 @@
+<html>
+<head><title>Agorobots - Thursday plan</title></head>
+<body>
+<h1>Agorobots - Thursday plan</h1>
+
+<h2>Using a switch as input.</h2>
+Any pin on the PIC can also be used as an input, so that your robot
+can get information about the world around it.  By default, a port B
+input (the A ports are harder to use because they don't have a
+default) is at 5 volts, and the corresponding bit in memory will be
+equal to 1 ("set").  If you connect it to <i>ground</i>, then the bit
+in memory will change to a 0 ("clear").  Here's how you can read the
+ports in a program:
+<pre>
+	useinput portb,2	; use B2 as an input
+	btfss	portb,2		; skip the next line if B2 is "set" (1)
+	goto	it_was_clear	; go to a different place if B2 is "clear" (0)
+
+it_was_set
+	; ... anything in here will be run if B2 was "set" ...
+	goto done_with_test	; this skips the next section
+
+it_was_clear
+	; ... anything in here will be run if B2 was "clear" ...
+
+done_with_test
+	; ... the rest of your program goes here ...
+</pre>
+
+
+<hr>
+<a href="..">Go back to the main page.</a>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!--#set var="title" value="Displaying reaction rate constants in latex"--> 
+<!--#set var="keywords" value="latex,rates,reaction"--> 
+<!--#include virtual="/header.html" -->
+
+<p>
+People in my lab sometimes want to be able to typeset the equation for
+a reversible chemical reaction in LaTeX:
+</p>
+
+<p style="text-align:center;">
+<img src="eqn.png">
+</p>
+
+<p>
+I've created a macro that allows you to typset that as follows:
+</p>
+
+<pre>
+{\rm H}_2{\rm O} \rates{k_{\rm 1}}{k_{\rm 2}} {\rm H}^+ + {\rm OH}^-
+</pre>
+
+<p>
+Here is the macro definition:
+</p>
+
+<pre>
+\def\longrightharpoonup{\relbar\joinrel\rightharpoonup}
+\def\longleftharpoondown{\leftharpoondown\joinrel\relbar}
+
+\def\longrightleftharpoons{
+  \mathop{
+    \vcenter{
+      \hbox{
+      \ooalign{
+        \raise1pt\hbox{$\longrightharpoonup\joinrel$}\crcr
+	  \lower1pt\hbox{$\longleftharpoondown\joinrel$}
+	  }
+      }
+    }
+  }
+}
+
+\newcommand{\rates}[2]{\displaystyle
+  \mathrel{\longrightleftharpoons^{#1\mathstrut}_{#2}}}
+</pre>
+
+<p>
+Note that I have to use the <code>\mathstrut</code> command in the
+defintion since otherwise the subscript on <i>k</i><sub>1</sub> seems
+to be a bit too close to the arrow.  I also go into displaystyle
+automatically; this is not useful if you are in a different mode.
+</p>
+
+<p>
+<a href="test.tex">Download an example file.</a>
+</p>
+
+<!--#include virtual="/footer_buttons.html" -->

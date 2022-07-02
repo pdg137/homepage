@@ -1,0 +1,62 @@
+<html>
+<head><title>Agorobots - Tuesday plan</title></head>
+<body>
+<h1>Agorobots - Wednesday plan</h1>
+
+
+<h2>A more complicated circuit.</h2>
+You can use a special kind of gate to blink the light on and off:<br>
+<img src="blinkcircuit.png"><br>
+Now you can see why we wanted 5 volts instead of 6; the chip requires
+a power supply of 5 volts to operate.  This chip can be used
+for much more than blinking lights, and you will learn how to do it!
+
+<h2>Introduction to the PIC.</h2>
+The chip you used to blink the light is a <i>microcontroller</i> - a
+microchip that can be used to control things like lights and robots -
+called the PIC16F627, or PIC for short.  Here is the huge <a
+href="http://www.microchip.com/download/lit/pline/picmicro/families/16c62x/40300b.pdf">technical
+datasheet</a> for the PIC, in case you are interested in learning
+about it on your own.  The PIC is programmed with a kind of <i>assembly
+language</i>, the most low-level kind of programming language there
+is.  Here is the program used to make the light blink:
+<pre>
+	include "<a href="../src/paultest/robot.h">robot.h</a>"
+
+	useoutput portb,3	; use B3 as an output
+
+loop
+	bsf	portb,3		; set the output B3
+	delay250		; wait 250 ms
+	bcf	portb,3		; clear the output B3
+	delay250		; wait 250 ms
+	goto	loop		; and repeat!
+
+	END
+</pre>
+You can download this program from our <a
+href="../src/">source directory</a>.
+
+<h2>The memory of the PIC.</h2>
+Inside the PIC, there are two types of memory: <i>program memory</i>,
+where your program is stored, and <i>data memory</i>, which is used by
+your program as a general purpose storage space.  Some locations in
+memory are special:<br>
+<img src="memory.png"><br>
+
+The blocks in this picture represent the <i>bytes</i> (each has eight
+individual 1s and 0s called <i>bits</i>) of data memory.  The
+large highlighted location at the end of memory is your general
+storage space, and the small blocks with names are bytes with special
+functions.  An arrow points to the most important ones for building a
+robot: the input/output bytes.  You can see that we used bit number
+three of <code>portb</code> in the example program above; this is
+called "port RB3".  The other ports, RA0-RA7 and RB0-RB7 are arranged
+on the chip as in this picture (don't worry about the extra names for
+some of the port; they indicate features that we probably won't need):<br>
+<img src="ports.png"><br>
+
+<hr>
+<a href="..">Go back to the main page.</a>
+</body>
+</html>
