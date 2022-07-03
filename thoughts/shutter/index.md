@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Simple Circuit for Controlling a Microscope Shutter"--> 
+title: Simple Circuit for Controlling a Microscope Shutter
 ---
 
 <h2>Introduction</h2>
