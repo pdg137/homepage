@@ -2,6 +2,8 @@
 layout: home
 ---
 
+<img src='/assets/paul.jpeg' style='width: 170px; float: right; margin:0.5em; margin-left: 1.5em;'>
+
 Hello, my name is Paul Grayson, and this is my personal page on the
 web.
 
@@ -32,10 +34,9 @@ Places you might find me:
 
 Some sites I maintain:
 
-* [pin1yin1.com](https://pin1yin1.com) - a Chinese pronunciation converter.
-* [a weather station](https://home.tikomaze.com/weewx/) - powered by a Raspberry Pi model B+! See the current weather in Henderson, NV.
+* [pin1yin1.com](https://pin1yin1.com) &mdash; a Chinese pronunciation converter.
+* [a weather station](https://home.tikomaze.com/weewx/) &mdash; the current weather in Henderson, NV, served up by a Raspberry Pi model&nbsp;B+.
 
 More:
 
 * [Family links](family)
-
