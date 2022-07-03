@@ -1,6 +1,5 @@
 ---
 layout: home
-title: Welcome
 ---
 
 Hello, my name is Paul Grayson, and this is my personal page on the
@@ -26,7 +25,7 @@ I do not update this page very often!
 You might want to look at my (old) [academic research](research) or
 (most even older) [random thoughts](thoughts).
 
-Places you might find me
+Places you might find me:
 
 * [OGS](https://online-go.com/)
 * [In the garden](https://alantg137.github.io/garden/)
@@ -36,12 +35,7 @@ Some sites I maintain:
 * [pin1yin1.com](https://pin1yin1.com) - a Chinese pronunciation converter.
 * [a weather station](https://home.tikomaze.com/weewx/) - powered by a Raspberry Pi model B+! See the current weather in Henderson, NV.
 
-Family links:
+More:
 
-* [Richard Grayson](http://doctorgrayson.com/)
-* [Daniel Grayson](https://faculty.math.illinois.edu/~dan/)
-* [David Grayson](http://www.davidegrayson.com/)
-* [Livingstone Lodging](http://livingstonelodging.com/)
-* [Elburn Market](https://reamsmeatmarket.com/)
-* [Elizabeth Jaxon](https://elizabethjaxon.com/)
-* Werthwein family tree
+* [Family links](family)
+

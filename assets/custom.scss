@@ -1,6 +1,7 @@
 ---
 ---
 // Put your custom CSS rules here
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway:wght@400;600&display=swap');
 
 .example-page-special1 {
   font-family: cursive;
@@ -26,28 +27,36 @@ $cyan:      #2aa198;
 $green:     #859900;
 
 body {
+  font-family: 'Raleway', sans-serif;
   background-color: $base02;
   color: $base0;
+  font-size: 17px;
+}
+
+p {
+  text-align: justify;
 }
 
 a {
   color: $blue;
+  font-weight: 600;
 }
 
 a:visited {
   color: $violet;
 }
 
-a:hover {
+.site-title, .site-title:visited, .site-nav .page-link {
+  color: $base1;
+  font-family: 'Poppins', sans-serif;
+}
+
+a:hover, a.site-title:hover, .site-nav a:hover {
   color: $green;
 }
 
-a:active {
+a:active, a.site-title:active, .site-nav a:active {
   color: $magenta;
-}
-
-.site-title, .site-title:visited, .site-nav .page-link {
-  color: $base1;
 }
 
 pre, code {
