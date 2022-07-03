@@ -34,7 +34,7 @@ Places you might find me
 Some sites I maintain:
 
 * [pin1yin1.com](https://pin1yin1.com) - a Chinese pronunciation converter.
-* [a weather station](http://tiko.jumpingcrab.com/weewx/) - powered by a Raspberry Pi model B+! See the current weather in Henderson, NV.
+* [a weather station](https://home.tikomaze.com/weewx/) - powered by a Raspberry Pi model B+! See the current weather in Henderson, NV.
 
 Family links:
 
