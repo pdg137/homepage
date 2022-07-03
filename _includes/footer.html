@@ -24,7 +24,11 @@
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
+        <p>{{- site.description | escape -}}
+        {%- if site.source -%}
+        &nbsp;&mdash; <a href="{{site.source_url}}">source</a>
+        {%- endif -%}
+        </p>
       </div>
     </div>
 

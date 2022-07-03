@@ -36,6 +36,7 @@ Some sites I maintain:
 
 * [pin1yin1.com](https://pin1yin1.com) &mdash; a Chinese pronunciation converter.
 * [a weather station](https://home.tikomaze.com/weewx/) &mdash; the current weather in Henderson, NV, served up by a Raspberry Pi model&nbsp;B+.
+* [Simple pages](https://pdg137.github.io/simple-pages/) &mdash; an easy starting point for building a site like this one, using Jekyll on Windows or Linux.
 
 More:
 
