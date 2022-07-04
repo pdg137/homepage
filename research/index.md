@@ -78,8 +78,7 @@ Society Meeting, 2005. (800k PDF)
   time, determining a velocity of up to 60 kbp/s.  This kind of analysis
   required a variety of bulk and single-molecule techniques including
   theoretical modeling of phages at many levels.
-    <object width="400" height="300" type="application/x-shockwave-flash" data="http://www.youtube.com/v/1WXx5Jas7SM"><param
-value="http://www.youtube.com/v/1WXx5Jas7SM" name="movie"> </object>
+    <iframe width="420" height="315" src="https://www.youtube.com/embed/1WXx5Jas7SM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 * Graduate research with Prof. Klaus Schulten. University of Illinois,
 Urbana-Champaign, 2001-2002.
   * Implemented the new technique Interactive Molecular Dynamics,
