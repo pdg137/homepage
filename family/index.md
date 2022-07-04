@@ -11,4 +11,4 @@ Some family links:
 * [Livingstone Lodging](http://livingstonelodging.com/)
 * [Elburn Market](https://reamsmeatmarket.com/)
 * [Elizabeth Jaxon](https://elizabethjaxon.com/)
-* Werthwein family tree
+* [Werthwein family tree](/werthwein)
