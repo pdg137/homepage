@@ -27,7 +27,6 @@ table.kefir td.arrow {
     text-align: center;
     padding: 0 !important;
     line-height: 1em;
-    font-family: Arial, Helvetica, Sans-serif
 }
 </style>
 
@@ -96,27 +95,27 @@ You will need some small ~16 oz containers (oops, not pictured), a
 <img src="1-grains.jpg"><br>
 Start with 1-2 tbsp strained kefir grains.
 </td>
-<td class="arrow">&#129094;</td>
+<td class="arrow">&rarr;</td>
 <td>
 <img src="2-grains-with-milk.jpg"><br>
 Mix with ~1 cup of fresh, cold milk in a small container.
 </td>
 </tr><tr>
-<td class="arrow">&#129093;</td>
+<td class="arrow">&uarr;</td>
 <td class="arrow"></td>
-<td class="arrow">&#129095;</td>
+<td class="arrow">&darr;</td>
 </tr><tr>
 <td>
 <img src="4-strain-grains.jpg"><br>
 When the liquid has slightly thickened, strain into 64 oz jar.
 </td>
-<td class="arrow">&#129092;</td>
+<td class="arrow">&larr;</td>
 <td>
 <img src="3-grains-with-milk2.jpg"><br>
 Close (not airtight!) and leave on the counter for 6 hours or more.
 </td>
 </tr><tr>
-<td class="arrow">&#129095;</td>
+<td class="arrow">&darr;</td>
 <td></td>
 <td></td>
 </tr><tr>
@@ -127,7 +126,7 @@ Close (not airtight!) and leave on the counter for 6 hours or more.
 Pour more milk through the grains to fill the jar.
 </td>
 </tr><tr>
-<td class="arrow">&#129095;</td>
+<td class="arrow">&darr;</td>
 <td></td>
 <td></td>
 </tr><tr>
@@ -136,7 +135,7 @@ Pour more milk through the grains to fill the jar.
 Cover (not airtight!) and leave on the counter.
 </td><td rowspan="3"></td>
 </tr><tr>
-<td class="arrow">&#129095;</td>
+<td class="arrow">&darr;</td>
 <td></td>
 <td></td>
 </tr><tr>
@@ -146,7 +145,7 @@ After 8-24 hours (depending on temperature) the milk should be thick
 and show bubbles or separation.
 </td>
 </tr><tr>
-<td class="arrow">&#129095;</td>
+<td class="arrow">&darr;</td>
 <td></td>
 <td></td>
 </tr><tr>
