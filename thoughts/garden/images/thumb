@@ -1,0 +1,1 @@
+convert $1 -thumbnail 600x600 `basename -s .jpg $1`.t.jpg
