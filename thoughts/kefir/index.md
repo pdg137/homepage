@@ -39,7 +39,7 @@ grains and perform fermentation.
 It is possible that kefir's unique properties are closely related
 to the uniqueness of the kefir grains, which are a somewhat magical
 substance of unknown origin.  Nobody knows how to make kefir grains
-from scratch, so they are passed from person.  Unlike yogurt, which
+from scratch, so they are passed from person to person.  Unlike yogurt, which
 relies on precise temperature control and is always at risk of
 contamination, kefir ferments perfectly at a variety of room
 temperatures, and the culture can survive being ignored for weeks in
