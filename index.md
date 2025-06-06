@@ -30,7 +30,7 @@ You might want to look at my (old) [academic research](research) or
 Places you might find me:
 
 * [OGS](https://online-go.com/)
-* [In the garden](https://alantg137.github.io/garden/)
+* [In the garden](thoughts/garden/milkweed)
 
 Some sites I maintain:
 
