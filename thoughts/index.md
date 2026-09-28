@@ -11,6 +11,7 @@ So, first I'll give you some useful links:
 
 Thoughts:
 
+* [Luminations successor project](luminations)
 * [Milkweed aphid predator farming concept](garden/milkweed)
 * [Pololu: Taking control of a typosquatting domain with a UDRP case](https://www.pololu.com/blog/924/taking-control-of-a-typosquatting-domain-with-a-udrp-case)
 * [Pololu: Series on how to make a balancing robot](https://www.pololu.com/blog/662/how-to-make-a-balboa-robot-balance-part-1-selecting-mechanical-parts)
